@@ -302,6 +302,14 @@
   @keyframes apostila-scroll{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
   @media (prefers-reduced-motion: reduce){ .apostila-track{ animation:none; } }
 
+  /* Velas marquee */
+  .velas-marquee{ overflow:hidden; margin:20px 0 4px; -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 5%, #000 95%, transparent 100%); mask-image:linear-gradient(90deg, transparent 0, #000 5%, #000 95%, transparent 100%); }
+  .velas-track{ display:flex; gap:14px; width:max-content; animation: velas-scroll 38s linear infinite reverse; }
+  .velas-track img{ height:190px; width:190px; object-fit:cover; border-radius:14px; box-shadow:var(--shadow-sm); flex:none; }
+  .velas-marquee:hover .velas-track{ animation-play-state:paused; }
+  @keyframes velas-scroll{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce){ .velas-track{ animation:none; } }
+
   /* FAQ */
   details.faq{ background:var(--white); border-radius:14px; box-shadow:var(--shadow-sm); margin-bottom:10px; overflow:hidden; }
   details.faq summary{ list-style:none; cursor:pointer; padding:16px 18px; font-weight:600; font-size:14.5px; display:flex; align-items:center; justify-content:space-between; gap:10px; }
@@ -525,6 +533,41 @@
     </div>
 
     <p class="lead center" style="margin-top:22px;">Tudo em apostilas com imagens passo a passo para consultar enquanto faz.</p>
+  </div>
+
+  <div class="velas-marquee">
+    <div class="velas-track">
+      <img src="fotos/velas/vela-11.webp" alt="Vela artesanal produzida no curso Velarte Essencial">
+      <img src="fotos/velas/vela-13.webp" alt="Vela artesanal produzida no curso Velarte Essencial">
+      <img src="fotos/velas/vela-15.webp" alt="Vela artesanal produzida no curso Velarte Essencial">
+      <img src="fotos/velas/vela-09.webp" alt="Vela artesanal produzida no curso Velarte Essencial">
+      <img src="fotos/velas/vela-05.webp" alt="Vela artesanal produzida no curso Velarte Essencial">
+      <img src="fotos/velas/vela-03.webp" alt="Vela artesanal produzida no curso Velarte Essencial">
+      <img src="fotos/velas/vela-07.webp" alt="Vela artesanal produzida no curso Velarte Essencial">
+      <img src="fotos/velas/vela-14.webp" alt="Vela artesanal produzida no curso Velarte Essencial">
+      <img src="fotos/velas/vela-02.webp" alt="Vela artesanal produzida no curso Velarte Essencial">
+      <img src="fotos/velas/vela-10.webp" alt="Vela artesanal produzida no curso Velarte Essencial">
+      <img src="fotos/velas/vela-06.webp" alt="Vela artesanal produzida no curso Velarte Essencial">
+      <img src="fotos/velas/vela-01.webp" alt="Vela artesanal produzida no curso Velarte Essencial">
+      <img src="fotos/velas/vela-12.webp" alt="Vela artesanal produzida no curso Velarte Essencial">
+      <img src="fotos/velas/vela-04.webp" alt="Vela artesanal produzida no curso Velarte Essencial">
+      <img src="fotos/velas/vela-08.webp" alt="Vela artesanal produzida no curso Velarte Essencial">
+      <img src="fotos/velas/vela-11.webp" alt="Vela artesanal produzida no curso Velarte Essencial">
+      <img src="fotos/velas/vela-13.webp" alt="Vela artesanal produzida no curso Velarte Essencial">
+      <img src="fotos/velas/vela-15.webp" alt="Vela artesanal produzida no curso Velarte Essencial">
+      <img src="fotos/velas/vela-09.webp" alt="Vela artesanal produzida no curso Velarte Essencial">
+      <img src="fotos/velas/vela-05.webp" alt="Vela artesanal produzida no curso Velarte Essencial">
+      <img src="fotos/velas/vela-03.webp" alt="Vela artesanal produzida no curso Velarte Essencial">
+      <img src="fotos/velas/vela-07.webp" alt="Vela artesanal produzida no curso Velarte Essencial">
+      <img src="fotos/velas/vela-14.webp" alt="Vela artesanal produzida no curso Velarte Essencial">
+      <img src="fotos/velas/vela-02.webp" alt="Vela artesanal produzida no curso Velarte Essencial">
+      <img src="fotos/velas/vela-10.webp" alt="Vela artesanal produzida no curso Velarte Essencial">
+      <img src="fotos/velas/vela-06.webp" alt="Vela artesanal produzida no curso Velarte Essencial">
+      <img src="fotos/velas/vela-01.webp" alt="Vela artesanal produzida no curso Velarte Essencial">
+      <img src="fotos/velas/vela-12.webp" alt="Vela artesanal produzida no curso Velarte Essencial">
+      <img src="fotos/velas/vela-04.webp" alt="Vela artesanal produzida no curso Velarte Essencial">
+      <img src="fotos/velas/vela-08.webp" alt="Vela artesanal produzida no curso Velarte Essencial">
+    </div>
   </div>
 </section>
 
