@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Velarte Essencial — Aprenda a Fazer Velas Artesanais do Zero</title>
+<meta name="description" content="Método Vela Base + 28 projetos de velas artesanais em apostilas passo a passo. Comece hoje por R$47.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕯️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FFF8EC;
+    --cream2:#FFEBD3;
+    --cream3:#FFFCF6;
+    --white:#FFFFFF;
+    --brown:#4A2E1A;
+    --brown-soft:#7A5B3F;
+    --terracotta:#F0793F;
+    --terracotta-dark:#D65F28;
+    --terracotta-light:#FFDCC0;
+    --sage:#5FA83D;
+    --sage-dark:#3E7A26;
+    --sage-light:#DEF2CB;
+    --yellow:#FFC736;
+    --yellow-dark:#E8A400;
+    --red:#E5473A;
+    --green:#20BF55;
+    --green-dark:#0F9145;
+    --shadow: 5px 6px 0 rgba(74,46,26,.14);
+    --shadow-sm: 3px 4px 0 rgba(74,46,26,.12);
+    --radius: 18px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Poppins', sans-serif;
+    background:var(--cream);
+    color:var(--brown);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{max-width:100%; display:block;}
+  h1,h2,h3{font-family:'Nunito', sans-serif; font-weight:900; color:var(--brown); line-height:1.16;}
+  .wrap{max-width:640px; margin:0 auto; padding:0 22px;}
+  section{padding:40px 0;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:12.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase;
+    color:var(--brown); background:var(--yellow);
+    padding:7px 14px; border-radius:100px; margin-bottom:14px;
+    border:2px solid var(--brown);
+  }
+  .eyebrow.sage{ color:#fff; background:var(--sage); border-color:var(--sage-dark); }
+  h2.title{ font-size:clamp(24px,5.5vw,32px); font-weight:800; margin-bottom:14px; }
+  p.lead{ font-size:16.5px; color:var(--brown-soft); margin-bottom:8px; }
+  .center{ text-align:center; }
+  .divider{ width:56px; height:3px; background:var(--terracotta); border-radius:3px; margin:18px auto; }
+
+  /* Header */
+  header.site{
+    position:sticky; top:0; z-index:50;
+    background:var(--yellow);
+    border-bottom:3px solid var(--brown);
+    padding:11px 0;
+  }
+  .logo-row{ display:flex; align-items:center; justify-content:center; gap:10px; }
+  .logo-row svg{ width:34px; height:34px; }
+  .logo-row .logo-text{ font-family:'Playfair Display',serif; font-weight:700; font-size:19px; color:var(--brown); letter-spacing:.2px; }
+  .logo-row .logo-text span{ display:block; font-family:'Poppins',sans-serif; font-weight:700; font-size:9px; letter-spacing:3px; color:var(--sage-dark); text-transform:uppercase; margin-top:-2px;}
+
+  /* Buttons */
+  .btn{
+    display:flex; align-items:center; justify-content:center; gap:10px;
+    background:var(--green);
+    color:#fff; font-family:'Nunito',sans-serif; font-weight:800; font-size:17px;
+    padding:18px 24px; border-radius:100px; text-decoration:none;
+    box-shadow: 0 6px 0 var(--green-dark), 0 6px 14px rgba(15,145,69,.28);
+    border:3px solid var(--brown); cursor:pointer; width:100%;
+    transition:transform .1s ease, box-shadow .1s ease;
+    text-align:center; text-transform:uppercase; letter-spacing:.3px;
+  }
+  .btn:active{ transform:translateY(4px); box-shadow:0 2px 0 var(--green-dark), 0 2px 8px rgba(15,145,69,.28); }
+  .btn .arrow{ font-size:19px; transition:transform .2s; }
+  .btn:hover .arrow{ transform:translateX(4px); }
+  .btn-sub{ text-align:center; font-size:12.5px; color:var(--brown-soft); margin-top:10px; }
+
+  .trust-row{
+    display:flex; flex-wrap:wrap; justify-content:center; gap:10px 18px;
+    margin-top:18px; font-size:12.5px; color:var(--brown-soft); font-weight:500;
+  }
+  .trust-row span{ display:inline-flex; align-items:center; gap:5px; white-space:nowrap; }
+
+  /* HERO */
+  .hero{ padding:38px 0 44px; text-align:center; }
+  .hero h1{ font-size:clamp(26px,6.6vw,36px); font-weight:800; margin-bottom:16px; }
+  .hero .lead{ font-size:16.5px; color:var(--brown-soft); max-width:520px; margin:0 auto 26px; }
+  .hero-media{
+    border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow);
+    margin-bottom:26px; position:relative;
+  }
+  .placeholder-img{
+    background:linear-gradient(135deg, var(--terracotta-light) 0%, var(--cream2) 55%, var(--sage-light) 100%);
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; padding:26px; gap:10px; min-height:220px;
+    border:1.5px dashed rgba(61,42,30,.28);
+  }
+  .placeholder-img svg{ width:46px; height:46px; opacity:.55; }
+  .placeholder-img .cap{ font-size:12.5px; font-style:italic; color:var(--brown-soft); max-width:280px; }
+  .placeholder-img .tag{ font-size:10.5px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:var(--terracotta-dark); background:rgba(255,255,255,.6); padding:4px 10px; border-radius:100px; }
+
+  .hero-photo{
+    position:relative; display:flex; align-items:flex-end; justify-content:center;
+    margin:0 auto 18px; max-width:420px;
+  }
+  .hero-photo img{
+    position:relative; z-index:1; width:100%; display:block;
+    filter:drop-shadow(0 10px 14px rgba(74,46,26,.14));
+    -webkit-mask-image:linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 72%, rgba(0,0,0,0) 96%);
+    mask-image:linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 72%, rgba(0,0,0,0) 96%);
+  }
+
+  /* Section backgrounds */
+  .bg-white{ background:var(--white); }
+  .bg-sage{ background:var(--sage-light); }
+  .bg-cream2{ background:var(--cream2); }
+  .bg-brown{ background:var(--brown); color:#F2E8DB; }
+  .bg-brown h2, .bg-brown h3{ color:#FBF3E6; }
+
+  /* Bullet / benefit lists */
+  .check-list{ list-style:none; display:flex; flex-direction:column; gap:14px; margin:22px 0; }
+  .check-list li{ display:flex; align-items:flex-start; gap:12px; font-size:15.5px; font-weight:500; color:var(--brown); }
+  .check-ico{
+    flex:none; width:26px; height:26px; border-radius:50%;
+    background:var(--sage); color:#fff; display:flex; align-items:center; justify-content:center;
+    font-size:13px; font-weight:800; margin-top:1px;
+  }
+  .dot-list{ list-style:none; display:flex; flex-direction:column; gap:12px; margin:20px 0; }
+  .dot-list li{ display:flex; align-items:flex-start; gap:12px; font-size:15.5px; color:var(--brown-soft); }
+  .dot-list li::before{ content:''; flex:none; width:8px; height:8px; border-radius:50%; background:var(--terracotta); margin-top:7px; }
+
+  /* Cards grid */
+  .grid-2{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:22px 0; }
+  .mini-card{
+    background:var(--white); border-radius:16px; padding:18px 14px; box-shadow:var(--shadow-sm);
+    text-align:center;
+  }
+  .mini-card .n{ font-family:'Nunito',sans-serif; font-size:26px; font-weight:800; color:var(--terracotta-dark); }
+  .mini-card .t{ font-size:12.5px; color:var(--brown-soft); font-weight:600; margin-top:4px; }
+
+  /* Base modules strip */
+  .base-strip{ display:flex; flex-direction:column; gap:10px; margin:22px 0; }
+  .base-item{
+    display:flex; align-items:center; gap:14px; background:var(--white);
+    border-radius:14px; padding:14px 16px; box-shadow:var(--shadow-sm);
+  }
+  .base-item .num{
+    flex:none; width:34px; height:34px; border-radius:50%; background:var(--terracotta);
+    color:#fff; font-family:'Nunito',sans-serif; font-weight:700; display:flex; align-items:center; justify-content:center;
+  }
+  .base-item .txt{ font-size:14.5px; font-weight:600; }
+
+  /* Category accordion */
+  .cat-list{ display:flex; flex-direction:column; gap:12px; margin-top:22px; }
+  details.cat{
+    background:var(--white); border-radius:16px; box-shadow:var(--shadow-sm); overflow:hidden;
+  }
+  details.cat summary{
+    list-style:none; cursor:pointer; padding:16px 18px; display:flex; align-items:center; gap:12px;
+    font-weight:700; font-size:15px;
+  }
+  details.cat summary::-webkit-details-marker{ display:none; }
+  details.cat summary .ic{ font-size:20px; }
+  details.cat summary .lbl{ flex:1; }
+  details.cat summary .cnt{ font-size:12px; font-weight:600; color:var(--brown-soft); background:var(--cream2); padding:4px 10px; border-radius:100px; }
+  details.cat summary .chev{ font-size:14px; color:var(--terracotta-dark); transition:transform .2s; }
+  details.cat[open] summary .chev{ transform:rotate(180deg); }
+  .cat-items{ display:flex; flex-wrap:wrap; gap:8px; padding:0 18px 18px; }
+  .cat-items span{
+    background:var(--cream2); color:var(--brown-soft); font-size:12.5px; font-weight:500;
+    padding:8px 12px; border-radius:100px;
+  }
+
+  /* Bonus cards */
+  .bonus-card{
+    display:flex; gap:16px; align-items:center; background:var(--white);
+    border-radius:18px; padding:18px; box-shadow:var(--shadow-sm); margin-bottom:14px;
+  }
+  .bonus-mock{
+    flex:none; width:78px; height:100px; border-radius:8px 12px 12px 8px;
+    background:linear-gradient(160deg, var(--terracotta) 0%, var(--terracotta-dark) 100%);
+    box-shadow: 3px 4px 0 rgba(61,42,30,.15), var(--shadow-sm);
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    color:#fff; position:relative; transform:rotate(-3deg);
+  }
+  .bonus-mock.sage{ background:linear-gradient(160deg, var(--sage) 0%, var(--sage-dark) 100%); }
+  .bonus-mock::before{
+    content:''; position:absolute; left:0; top:8px; bottom:8px; width:3px; background:rgba(255,255,255,.35);
+  }
+  .bonus-mock .bi{ font-size:22px; }
+  .bonus-mock .bt{ font-size:8.5px; font-weight:700; letter-spacing:.5px; text-align:center; padding:0 6px; margin-top:6px; text-transform:uppercase; }
+  .bonus-info .name{ font-weight:700; font-size:15px; margin-bottom:4px; }
+  .bonus-info .desc{ font-size:13.5px; color:var(--brown-soft); margin-bottom:8px; }
+  .price-tag{ font-size:13.5px; font-weight:800; }
+  .price-tag .old{ text-decoration:line-through; color:var(--red); margin-right:6px; }
+  .price-tag .new{ color:#fff; background:var(--green); padding:2px 8px; border-radius:6px; }
+  .value-banner{
+    text-align:center; background:var(--sage); color:#fff; font-weight:800; font-size:14.5px;
+    padding:16px; border-radius:14px; margin-top:6px; border:3px solid var(--sage-dark);
+  }
+
+  /* Testimonials */
+  .testi-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:8px; }
+  .testi-card{
+    background:var(--white); border-radius:16px; box-shadow:var(--shadow-sm);
+    overflow:hidden; display:flex; flex-direction:column;
+  }
+  .testi-card img{ width:100%; display:block; }
+  .testi-quote{
+    padding:10px 12px 12px; font-size:12px; font-weight:800; line-height:1.35;
+    color:var(--brown); background:var(--yellow); border-top:2px solid var(--brown);
+  }
+  .stat-big{ text-align:center; margin-bottom:8px; }
+  .stat-big .num{ font-family:'Nunito',sans-serif; font-weight:900; font-size:44px; color:var(--terracotta-dark); }
+  .stat-big .lbl{ font-size:14px; font-weight:600; color:var(--brown-soft); }
+
+  /* Urgency banner */
+  .urgency-box{
+    background:var(--yellow); border:3px solid var(--brown);
+    border-radius:18px; padding:22px; text-align:center;
+  }
+  .urgency-box .ic{ font-size:30px; margin-bottom:8px; }
+  .urgency-box p{ font-size:15px; color:var(--brown); font-weight:500; margin-bottom:6px; }
+  .urgency-box p:last-child{ font-weight:700; color:var(--terracotta-dark); margin-bottom:0; }
+  .urgency-box .check-list{ text-align:left; margin:14px 0; gap:10px; }
+  .urgency-box .check-list li{ font-size:14.5px; }
+  .progress-track{
+    width:100%; height:22px; background:var(--cream3); border:2px solid var(--brown);
+    border-radius:100px; overflow:hidden;
+  }
+  .progress-fill{
+    height:100%; width:84%; background:linear-gradient(90deg, var(--terracotta) 0%, var(--terracotta-dark) 100%);
+  }
+  .progress-label{
+    font-size:13px; font-weight:800; color:var(--brown); text-align:center; margin-top:8px;
+  }
+
+  /* Authority */
+  .auth-card{
+    display:flex; flex-direction:column; align-items:center; text-align:center; gap:16px;
+  }
+  .auth-photo{ width:150px; height:150px; border-radius:50%; overflow:hidden; box-shadow:var(--shadow); }
+  .auth-photo .placeholder-img{ min-height:150px; border-radius:50%; }
+  .auth-name{ font-family:'Nunito',sans-serif; font-weight:700; font-size:20px; }
+
+  /* Offer box */
+  .offer-box{
+    background:var(--white); border-radius:24px; padding:30px 24px; box-shadow:var(--shadow);
+    border:3px solid var(--brown);
+  }
+  .offer-box h3{ font-size:19px; font-weight:700; margin-bottom:4px; }
+  .price-block{ text-align:center; margin:22px 0; }
+  .price-block .from{ font-size:14px; color:var(--red); text-decoration:line-through; font-weight:700; }
+  .price-block .now{
+    font-family:'Nunito',sans-serif; font-weight:900; font-size:44px; color:#fff;
+    background:var(--green); display:inline-block; padding:6px 24px; border-radius:14px;
+    border:3px solid var(--brown); transform:rotate(-2deg); margin-top:6px;
+  }
+  .price-block .now sup{ font-size:20px; top:-.6em; }
+  .price-block .cash{ font-size:13.5px; color:var(--brown-soft); font-weight:700; margin-top:8px; display:block; }
+  .bonus-recap{ display:flex; flex-direction:column; gap:8px; margin:18px 0; }
+  .bonus-recap .r{ display:flex; justify-content:space-between; font-size:13.5px; background:var(--cream2); padding:9px 12px; border-radius:10px; }
+  .bonus-recap .r b{ font-weight:700; }
+  .total-row{ display:flex; justify-content:space-between; font-size:14px; font-weight:700; padding:10px 12px; }
+
+  /* Guarantee */
+  .guarantee{ display:flex; align-items:center; gap:18px; background:var(--sage-light); border-radius:20px; padding:22px; }
+  .g-seal{ flex:none; width:92px; height:92px; border-radius:50%; object-fit:cover; box-shadow:var(--shadow-sm); }
+  .guarantee h3{ font-size:17px; margin-bottom:6px; }
+  .guarantee p{ font-size:14px; color:var(--brown-soft); }
+
+  /* Objections */
+  .obj-card{ background:var(--white); border-radius:16px; padding:18px; box-shadow:var(--shadow-sm); margin-bottom:12px; }
+  .obj-q{ display:flex; align-items:flex-start; gap:10px; font-weight:700; font-size:15px; color:var(--terracotta-dark); margin-bottom:8px; }
+  .obj-q .qm{ flex:none; width:24px; height:24px; border-radius:50%; background:var(--terracotta); color:#fff; font-size:12px; display:flex; align-items:center; justify-content:center; }
+  .obj-a{ font-size:14.5px; color:var(--brown-soft); padding-left:34px; }
+
+  /* Math box */
+  .math-box{ background:var(--cream2); border-radius:16px; padding:18px; margin:20px 0; }
+  .math-row{ display:flex; align-items:center; justify-content:center; gap:10px; font-family:'Nunito',sans-serif; font-weight:700; font-size:19px; flex-wrap:wrap; text-align:center; margin-bottom:10px;}
+  .math-row .op{ color:var(--terracotta-dark); font-size:15px; }
+  .math-note{ text-align:center; font-size:13px; color:var(--brown-soft); }
+  .fine-print{ font-size:11px; color:var(--brown-soft); text-align:center; margin-top:14px; opacity:.85; }
+
+  /* Apostila marquee */
+  .apostila-marquee{ overflow:hidden; margin:20px 0 26px; -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 5%, #000 95%, transparent 100%); mask-image:linear-gradient(90deg, transparent 0, #000 5%, #000 95%, transparent 100%); }
+  .apostila-track{ display:flex; gap:14px; width:max-content; animation: apostila-scroll 32s linear infinite; }
+  .apostila-track img{ height:230px; width:auto; border-radius:14px; box-shadow:var(--shadow-sm); flex:none; }
+  .apostila-marquee:hover .apostila-track{ animation-play-state:paused; }
+  @keyframes apostila-scroll{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce){ .apostila-track{ animation:none; } }
+
+  /* FAQ */
+  details.faq{ background:var(--white); border-radius:14px; box-shadow:var(--shadow-sm); margin-bottom:10px; overflow:hidden; }
+  details.faq summary{ list-style:none; cursor:pointer; padding:16px 18px; font-weight:600; font-size:14.5px; display:flex; align-items:center; justify-content:space-between; gap:10px; }
+  details.faq summary::-webkit-details-marker{ display:none; }
+  details.faq summary .chev{ font-size:14px; color:var(--terracotta-dark); transition:transform .2s; flex:none; }
+  details.faq[open] summary .chev{ transform:rotate(45deg); }
+  details.faq .a{ padding:0 18px 16px; font-size:13.5px; color:var(--brown-soft); }
+
+  /* Support */
+  .support-box{ background:var(--sage-light); border-radius:20px; padding:26px; text-align:center; }
+  .support-box .ic{ font-size:30px; margin-bottom:10px; }
+  .support-box .hours{ font-size:13px; color:var(--brown-soft); margin:10px 0 18px; }
+  .btn-outline{
+    display:inline-flex; align-items:center; gap:8px; background:transparent; border:2px solid var(--sage-dark);
+    color:var(--sage-dark); font-weight:700; font-size:14.5px; padding:13px 22px; border-radius:100px; text-decoration:none;
+  }
+
+  /* Footer */
+  footer{ background:var(--brown); color:#D9CBBC; padding:40px 0 90px; text-align:center; font-size:12.5px; }
+  footer .flogo{ font-family:'Nunito',sans-serif; font-weight:700; font-size:18px; color:#fff; margin-bottom:8px; }
+  footer .flinks{ display:flex; justify-content:center; gap:16px; flex-wrap:wrap; margin:14px 0; font-size:12px; }
+  footer .flinks a{ color:#D9CBBC; text-decoration:none; }
+  footer .fdisc{ opacity:.65; max-width:480px; margin:14px auto 0; font-size:11px; }
+
+  /* Sticky bottom CTA */
+  .sticky-cta{
+    position:fixed; left:0; right:0; bottom:0; z-index:60;
+    background:var(--white); box-shadow:0 -8px 24px rgba(61,42,30,.16);
+    padding:12px 16px; display:flex; align-items:center; gap:12px;
+    transform:translateY(120%); transition:transform .3s ease;
+  }
+  .sticky-cta.show{ transform:translateY(0); }
+  .sticky-cta .sp{ flex:1; }
+  .sticky-cta .sp .l{ font-size:10.5px; color:var(--brown-soft); font-weight:600; }
+  .sticky-cta .sp .v{ font-family:'Nunito',sans-serif; font-weight:800; font-size:19px; color:var(--green-dark); }
+  .sticky-cta .btn{ width:auto; padding:14px 20px; font-size:14px; }
+
+  @media(min-width:600px){
+    .hero-media{ min-height:280px; }
+    .placeholder-img{ min-height:280px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="logo-row">
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M46 22c8 0 12 6 12 12s-4 9-4 9" stroke="#F0793F" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M42 45c-3 8-2 15 8 15s11-7 8-15c-2-5-6-8-8-13-2 5-6 8-8 13Z" fill="#F0793F"/>
+      <rect x="35" y="47" width="30" height="34" rx="3" stroke="#F0793F" stroke-width="2.4"/>
+      <path d="M50 60c-4 0-6 2.5-6 5.5S46 71 50 71s6-2.5 6-5.5S54 60 50 60Z" fill="#F0793F" opacity=".9"/>
+    </svg>
+    <div class="logo-text">VELARTE<span>ESSENCIAL</span></div>
+  </div>
+</header>
+
+<!-- DOBRA 1 — GANCHO -->
+<section class="hero">
+  <div class="wrap">
+    <h1>Aprenda a fazer velas artesanais do zero, começando pelos materiais e técnicas certas.</h1>
+    <p class="lead">Mesmo que hoje você ainda não saiba qual cera ou pavio usar.</p>
+
+    <div class="hero-photo">
+      <img src="fotos/hero-mariana.webp" alt="Mariana Bellini segurando uma vela artesanal Velarte Essencial">
+    </div>
+
+    <p class="lead" style="font-weight:600; color:var(--brown);">Com o Método Vela Base, você aprende primeiro o que realmente importa sobre cera, pavio, essência e temperatura — para depois avançar por 28 projetos, sem depender de tentativa e erro.</p>
+
+    <div style="margin-top:26px;">
+      <a href="#oferta" class="btn">QUERO COMEÇAR A FAZER VELAS <span class="arrow">→</span></a>
+      <div class="trust-row">
+        <span>🔒 Pagamento seguro</span>
+        <span>📱 Acesso digital</span>
+        <span>📖 Curso em apostilas</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOBRA 2 — DO INTERESSE PARA A POSSIBILIDADE -->
+<section class="bg-white">
+  <div class="wrap center">
+    <span class="eyebrow">O método</span>
+    <h2 class="title">Comece pela base. Depois, veja tudo o que você pode criar.</h2>
+    <p class="lead">Com o Método Vela Base, você aprende primeiro os fundamentos que se repetem nas velas artesanais.</p>
+    <p class="lead" style="margin-top:10px;">Depois, usa essa base para avançar por 28 projetos passo a passo:</p>
+  </div>
+
+  <div class="wrap">
+    <ul class="dot-list">
+      <li>Velas aromáticas e perfumadas</li>
+      <li>Velas florais com flores e cristais</li>
+      <li>Velas de gel, geodo e oceano</li>
+      <li>Velas de massagem e repelentes</li>
+      <li>Velas decorativas e com efeitos especiais</li>
+    </ul>
+
+    <div class="hero-media" style="margin-top:8px;">
+      <img src="fotos/section2-projetos.webp" alt="Velas artesanais produzidas no curso Velarte Essencial, do simples ao mais elaborado">
+    </div>
+
+    <p class="lead center" style="margin-top:22px;">Tudo em apostilas ilustradas para acompanhar enquanto você faz.</p>
+    <p class="center" style="font-weight:700; font-size:16.5px; margin-top:14px;">Você não precisa aprender 28 técnicas do zero.<br>Aprende a base uma vez. E usa para criar muito mais.</p>
+  </div>
+</section>
+
+<!-- DOBRA 3 — POR QUE FICA MAIS FÁCIL COMEÇAR ASSIM -->
+<section class="bg-sage">
+  <div class="wrap center">
+    <span class="eyebrow sage">Como funciona</span>
+    <h2 class="title">Aprenda no seu ritmo. E transforme suas criações em uma possível renda em casa.</h2>
+    <p class="lead">O Velarte Essencial é um curso em apostilas, feito para você consultar enquanto coloca a mão na massa.</p>
+  </div>
+
+  <div class="wrap">
+    <ul class="check-list">
+      <li><span class="check-ico">✓</span>Acompanhe o passo a passo enquanto produz</li>
+      <li><span class="check-ico">✓</span>Volte à receita sempre que precisar</li>
+      <li><span class="check-ico">✓</span>Aprenda no seu tempo, sem depender de horários</li>
+      <li><span class="check-ico">✓</span>Crie velas para usar, presentear ou começar a vender</li>
+    </ul>
+    <p class="lead center">E com o Método Vela Base, você não precisa depender de tentativa e erro para cada nova criação.</p>
+    <p class="center" style="font-weight:700; font-size:16.5px; margin-top:14px;">Comece aprendendo. Depois, suas próprias velas podem virar uma nova fonte de renda.</p>
+  </div>
+</section>
+
+<!-- DOBRA 4 — BENEFÍCIOS -->
+<section class="bg-white">
+  <div class="wrap center">
+    <span class="eyebrow">O que você ganha</span>
+    <h2 class="title">Do zero às velas que você sempre salva para tentar fazer "um dia".</h2>
+  </div>
+  <div class="wrap">
+    <div class="hero-media">
+      <img src="fotos/section4-beneficios.webp" alt="Velas artesanais em formato de geodo e outros modelos produzidos no curso Velarte Essencial">
+    </div>
+    <p class="lead center">Com o Velarte Essencial, você vai poder:</p>
+    <ul class="check-list">
+      <li><span class="check-ico">✓</span>Saber quais materiais comprar para começar</li>
+      <li><span class="check-ico">✓</span>Entender melhor ceras, pavios e temperaturas</li>
+      <li><span class="check-ico">✓</span>Fazer suas primeiras velas aromáticas</li>
+      <li><span class="check-ico">✓</span>Criar velas florais, decorativas e artísticas</li>
+      <li><span class="check-ico">✓</span>Parar de depender apenas de tentativa e erro</li>
+      <li><span class="check-ico">✓</span>Calcular o custo das suas próprias velas</li>
+    </ul>
+    <p class="center" style="font-weight:700; font-size:16.5px;">Comece pelo básico. E evolua no seu ritmo.</p>
+  </div>
+</section>
+
+<!-- DOBRA 5 — TUDO QUE VOCÊ VAI APRENDER -->
+<section class="bg-cream2">
+  <div class="wrap center">
+    <span class="eyebrow">Conteúdo do curso</span>
+    <h2 class="title">28 projetos para você começar pelo simples e descobrir tudo o que pode criar com velas.</h2>
+  </div>
+
+  <div class="wrap">
+    <div class="hero-media">
+      <img src="fotos/section5-apostila.webp" alt="Página da apostila do curso Velarte Essencial mostrando a lista de materiais e o modo de preparo de um projeto">
+    </div>
+    <p style="font-weight:700; font-size:13.5px; text-transform:uppercase; letter-spacing:1px; color:var(--sage-dark); margin-top:10px;">Antes dos projetos, você aprende a base:</p>
+    <div class="base-strip">
+      <div class="base-item"><div class="num">1</div><div class="txt">Começando no Mundo das Velas</div></div>
+      <div class="base-item"><div class="num">2</div><div class="txt">Método Vela Base</div></div>
+      <div class="base-item"><div class="num">3</div><div class="txt">Guia da Cera de Soja</div></div>
+    </div>
+
+    <div class="cat-list">
+      <details class="cat" open>
+        <summary><span class="ic">🌿</span><span class="lbl">Aromáticas &amp; Funcionais</span><span class="cnt">7 projetos</span><span class="chev">⌄</span></summary>
+        <div class="cat-items">
+          <span>Vela Aromática Repelente de Insetos</span>
+          <span>Vela com Cera de Abelha e Óleo de Coco</span>
+          <span>Vela Aromática com Cera de Soja</span>
+          <span>Vela Temática de Natal com Blend de Cera</span>
+          <span>Vela Aromática com Cera de Coco</span>
+          <span>Vela de Massagem Hidratante</span>
+          <span>Vela Aromática com Flores</span>
+        </div>
+      </details>
+
+      <details class="cat">
+        <summary><span class="ic">🎨</span><span class="lbl">Decorativas &amp; Criativas</span><span class="cnt">7 projetos</span><span class="chev">⌄</span></summary>
+        <div class="cat-items">
+          <span>Vela com Base de Cimento</span>
+          <span>Vela com Base de Pedras e Resina</span>
+          <span>Vela Caneca de Natal</span>
+          <span>Vela Drink ao Leite com Cera em Gel</span>
+          <span>Vela em Pó Vegetal</span>
+          <span>Vela Colorida com Textura Macia e Porosa</span>
+          <span>Vela Marmorizada com Efeito Mármore</span>
+        </div>
+      </details>
+
+      <details class="cat">
+        <summary><span class="ic">🌸</span><span class="lbl">Florais &amp; Botânicas</span><span class="cnt">9 projetos</span><span class="chev">⌄</span></summary>
+        <div class="cat-items">
+          <span>Vela Botânica em Molde de Silicone</span>
+          <span>Vela Floral com Cristais</span>
+          <span>Vela Floral em Molde Metálico</span>
+          <span>Vela Chantilly com Flores Secas</span>
+          <span>Vela com Flores Secas e Cristais</span>
+          <span>Vela Luminária com Flores Desidratadas</span>
+          <span>Vela Luminária para o Dia dos Namorados</span>
+          <span>Vela Floral em Pilar</span>
+          <span>Vela Jardim de Rosas</span>
+        </div>
+      </details>
+
+      <details class="cat">
+        <summary><span class="ic">✨</span><span class="lbl">Artísticas &amp; Efeitos Especiais</span><span class="cnt">5 projetos</span><span class="chev">⌄</span></summary>
+        <div class="cat-items">
+          <span>Vela Geodo em Pilar</span>
+          <span>Vela Geodo com Cera em Gel</span>
+          <span>Vela Fundo do Mar</span>
+          <span>Vela Oceano</span>
+          <span>Vela de Gel Decorativa</span>
+        </div>
+      </details>
+    </div>
+
+    <p class="lead center" style="margin-top:22px;">Tudo em apostilas com imagens passo a passo para consultar enquanto faz.</p>
+  </div>
+</section>
+
+<!-- DOBRA 6 — BÔNUS -->
+<section class="bg-white">
+  <div class="wrap center">
+    <span class="eyebrow">Bônus exclusivos</span>
+    <h2 class="title">E ainda leva 3 bônus</h2>
+    <p class="lead">Para você não precisar descobrir o restante sozinha.</p>
+  </div>
+
+  <div class="wrap">
+    <div class="bonus-card">
+      <div class="bonus-mock"><div class="bi">🎁</div><div class="bt">Kit Inicial</div></div>
+      <div class="bonus-info">
+        <div class="name">BÔNUS 1 — Kit Inicial Velarte</div>
+        <div class="desc">O que comprar para começar — e o que você ainda não precisa comprar.</div>
+        <div class="price-tag"><span class="old">De R$27</span><span class="new">GRÁTIS</span></div>
+      </div>
+    </div>
+
+    <div class="bonus-card">
+      <div class="bonus-mock sage"><div class="bi">📋</div><div class="bt">Fornecedores</div></div>
+      <div class="bonus-info">
+        <div class="name">BÔNUS 2 — Lista de Fornecedores Velarte</div>
+        <div class="desc">Indicações para facilitar a busca pelos materiais das suas velas.</div>
+        <div class="price-tag"><span class="old">De R$19</span><span class="new">GRÁTIS</span></div>
+      </div>
+    </div>
+
+    <div class="bonus-card">
+      <div class="bonus-mock"><div class="bi">🧮</div><div class="bt">Precificação</div></div>
+      <div class="bonus-info">
+        <div class="name">BÔNUS 3 — Calculando o Preço da Sua Vela</div>
+        <div class="desc">Aprenda a calcular seus custos e descobrir quanto realmente custa cada vela que você produz.</div>
+        <div class="price-tag"><span class="old">De R$37</span><span class="new">GRÁTIS</span></div>
+      </div>
+    </div>
+
+    <div class="value-banner">R$83 em materiais extras incluídos sem custo no Velarte Essencial.</div>
+  </div>
+</section>
+
+<!-- DOBRA 7A — DEPOIMENTOS -->
+<section class="bg-cream2">
+  <div class="wrap">
+    <div class="stat-big">
+      <div class="num">5.000+</div>
+      <div class="lbl">alunas satisfeitas</div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="testi-grid">
+      <div class="testi-card">
+        <img src="fotos/Depoimentos/depoimento1.webp" alt="Depoimento de aluna sobre o Velarte Essencial">
+        <p class="testi-quote">"O seu é disparado o melhor."</p>
+      </div>
+      <div class="testi-card">
+        <img src="fotos/Depoimentos/depoimento3.webp" alt="Depoimento de aluna sobre o Velarte Essencial">
+        <p class="testi-quote">"O curso é excelente, e o material é muito bom."</p>
+      </div>
+      <div class="testi-card">
+        <img src="fotos/Depoimentos/depoimento5.webp" alt="Depoimento de aluno sobre o Velarte Essencial">
+        <p class="testi-quote">"Estou gostando muito! Estou amando."</p>
+      </div>
+      <div class="testi-card">
+        <img src="fotos/Depoimentos/depoimento6.webp" alt="Depoimento de aluna sobre o Velarte Essencial">
+        <p class="testi-quote">"Aprendendo muito! Muito bom."</p>
+      </div>
+      <div class="testi-card">
+        <img src="fotos/Depoimentos/depoimento12.webp" alt="Depoimento de aluna sobre o Velarte Essencial">
+        <p class="testi-quote">"Não vejo a hora de comprar os materiais e começar a fazer."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOBRA 8 — URGÊNCIA -->
+<section class="bg-white">
+  <div class="wrap">
+    <div class="urgency-box">
+      <div class="ic">⏳</div>
+      <p style="font-weight:800; font-size:19px;">Restam 47 acessos neste primeiro lote.</p>
+      <p>Para a primeira turma do Velarte Essencial, liberamos apenas 300 acessos na condição de lançamento.</p>
+      <p style="font-weight:700; margin-top:8px;">Quem entrar neste lote garante:</p>
+      <ul class="check-list">
+        <li><span class="check-ico">✓</span>Velarte Essencial completo</li>
+        <li><span class="check-ico">✓</span>Os 3 bônus sem custo adicional</li>
+        <li><span class="check-ico">✓</span>Acesso vitalício ao curso em apostilas</li>
+      </ul>
+      <div class="progress-track"><div class="progress-fill"></div></div>
+      <p class="progress-label">47 de 300 acessos disponíveis</p>
+      <p style="margin-top:14px;">253 acessos já foram liberados. Restam 47.</p>
+      <p>Quando este lote chegar a 300 alunas, o próximo será aberto com um novo valor.</p>
+      <p>Se você quer começar, aproveite enquanto ainda faz parte deste primeiro lote.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DOBRA 9 — MICRO-AUTORIDADE -->
+<section class="bg-sage">
+  <div class="wrap auth-card">
+    <span class="eyebrow sage">Quem ensina</span>
+    <h2 class="title">Aprenda com quem vive o mundo das velas artesanais.</h2>
+    <div class="hero-media" style="width:100%;">
+      <img src="fotos/section9-autoridade.webp" alt="Mariana Bellini na loja Velarte Essencial">
+    </div>
+    <p class="lead">Mariana Bellini transformou o interesse pelas velas em parte da sua rotina e hoje compartilha o caminho que uma iniciante precisa conhecer para começar com mais segurança.</p>
+    <p class="lead">No Velarte Essencial, ela reuniu os fundamentos, materiais e projetos em uma sequência simples de acompanhar.</p>
+    <p style="font-weight:700; font-size:15.5px;">Sem complicação. Sem termos difíceis. Do jeito que uma iniciante precisa.</p>
+  </div>
+</section>
+
+<!-- DOBRA 10 — OFERTA -->
+<section class="bg-cream2" id="oferta">
+  <div class="wrap center">
+    <span class="eyebrow">A oferta</span>
+    <h2 class="title">Comece hoje no mundo das velas artesanais.</h2>
+    <p class="lead">Ao entrar no Velarte Essencial, você recebe:</p>
+  </div>
+
+  <div class="wrap">
+    <div class="offer-box">
+      <div style="max-width:280px; margin:0 auto 20px; border-radius:16px; overflow:hidden; box-shadow:var(--shadow-sm);">
+        <img src="fotos/section10-oferta.webp" alt="Acesso vitalício ao curso Velarte Essencial" style="width:100%; display:block;">
+      </div>
+      <ul class="check-list">
+        <li><span class="check-ico">✓</span>Curso completo em apostilas passo a passo</li>
+        <li><span class="check-ico">✓</span>Método Vela Base</li>
+        <li><span class="check-ico">✓</span>Guia da Cera de Soja</li>
+        <li><span class="check-ico">✓</span>28 projetos de velas artesanais</li>
+        <li><span class="check-ico">✓</span>Acesso VITALÍCIO pelo celular, tablet ou computador</li>
+      </ul>
+
+      <p style="text-align:center; font-weight:700; font-size:13.5px; text-transform:uppercase; letter-spacing:1px; color:var(--terracotta-dark); margin:18px 0 10px;">+ 3 bônus grátis</p>
+      <div class="bonus-recap">
+        <div class="r"><span>🎁 Kit Inicial Velarte</span><b>R$27</b></div>
+        <div class="r"><span>🎁 Lista de Fornecedores</span><b>R$19</b></div>
+        <div class="r"><span>🎁 Calculando o Preço da Sua Vela</span><b>R$37</b></div>
+        <div class="total-row"><span>Valor dos bônus</span><span>R$83</span></div>
+      </div>
+
+      <p class="center lead" style="margin-top:14px;">Tudo isso poderia facilmente custar mais de R$100.<br>Hoje, você não paga R$100. Nem R$83.</p>
+      <p class="center" style="font-size:14px; font-weight:600; margin-top:4px;">Seu acesso completo ao Velarte Essencial sai por apenas:</p>
+
+      <div class="price-block">
+        <div class="now">R$47</div>
+        <div class="cash">à vista</div>
+      </div>
+
+      <a href="#checkout" class="btn">QUERO COMEÇAR A FAZER VELAS <span class="arrow">→</span></a>
+      <div class="trust-row">
+        <span>🔒 Pagamento seguro</span>
+        <span>📱 Acesso digital</span>
+        <span>📖 Curso em apostilas</span>
+        <span>🎁 3 bônus incluídos</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOBRA 11 — GARANTIA -->
+<section class="bg-white">
+  <div class="wrap">
+    <div class="guarantee">
+      <img class="g-seal" src="fotos/guarantee-seal.webp" alt="Selo de garantia de 7 dias — satisfação garantida ou seu dinheiro de volta">
+      <div>
+        <h3>7 dias de garantia</h3>
+        <p>Você tem 7 dias para conhecer o Velarte Essencial. Entre, acesse as apostilas e conheça o conteúdo com calma. Se dentro de 7 dias você perceber que não é para você, basta solicitar o reembolso. Você recebe 100% do valor pago de volta. Sem risco para começar.</p>
+      </div>
+    </div>
+    <a href="#oferta" class="btn" style="margin-top:22px;">QUERO COMEÇAR A FAZER VELAS <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<!-- DOBRA 12 — QUEM É MARIANA BELLINI -->
+<section class="bg-cream2">
+  <div class="wrap center">
+    <span class="eyebrow">A história</span>
+    <h2 class="title">Quem é Mariana Bellini</h2>
+  </div>
+  <div class="wrap">
+    <div class="hero-media">
+      <img src="fotos/section12-historia.webp" alt="Mariana Bellini, especialista e fundadora do Velarte Essencial">
+    </div>
+    <p class="lead">Mariana Bellini conheceu as velas artesanais em Petrópolis, na Região Serrana do Rio de Janeiro.</p>
+    <p class="lead">Começou fazendo pequenos testes em casa e enfrentou as mesmas dúvidas de muitas iniciantes: qual cera escolher, qual pavio usar e por que algumas velas simplesmente não davam certo. Foi quando decidiu organizar o processo e dominar primeiro os fundamentos antes de avançar para novas criações.</p>
+    <p class="lead">Com o tempo, vieram as primeiras peças bem-feitas, os pedidos de pessoas próximas e novas encomendas. O que começou dentro de casa cresceu até se transformar em seu próprio espaço dedicado às velas artesanais, onde Mariana passou a produzir diferentes modelos e aprofundar cada vez mais sua técnica.</p>
+    <p class="lead">Hoje, ela reuniu esse conhecimento no Velarte Essencial, para tornar o começo de outras mulheres muito mais simples.</p>
+    <a href="#oferta" class="btn" style="margin-top:8px;">QUERO COMEÇAR A FAZER VELAS <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<!-- DOBRA 13 — "MAS SERÁ QUE É PARA MIM?" -->
+<section class="bg-white">
+  <div class="wrap center">
+    <span class="eyebrow">Suas dúvidas</span>
+    <h2 class="title">"Mas será que é para mim?"</h2>
+  </div>
+  <div class="wrap">
+    <div class="obj-card">
+      <div class="obj-q"><span class="qm">?</span>"Nunca fiz uma vela."</div>
+      <div class="obj-a">Melhor ainda. O Velarte Essencial começa pelos fundamentos e mostra até os materiais necessários para começar.</div>
+    </div>
+    <div class="obj-card">
+      <div class="obj-q"><span class="qm">?</span>"Tenho medo de comprar tudo errado."</div>
+      <div class="obj-a">Você recebe o Kit Inicial Velarte + Lista de Fornecedores, para saber o que procurar e evitar compras desnecessárias.</div>
+    </div>
+    <div class="obj-card">
+      <div class="obj-q"><span class="qm">?</span>"Não tenho experiência com artesanato."</div>
+      <div class="obj-a">Você não precisa. As apostilas foram organizadas para serem consultadas passo a passo, no seu ritmo.</div>
+    </div>
+    <p class="center" style="font-weight:700; font-size:16px; margin-top:18px;">Se você tem vontade de aprender, já pode começar.</p>
+    <a href="#oferta" class="btn" style="margin-top:18px;">QUERO COMEÇAR A FAZER VELAS <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<!-- DOBRA 14 — REPETE A OFERTA -->
+<section class="bg-cream2">
+  <div class="wrap center">
+    <span class="eyebrow">Vale o investimento?</span>
+    <h2 class="title">Um conhecimento que pode começar a se pagar com as suas próprias velas.</h2>
+  </div>
+
+  <div class="apostila-marquee">
+    <div class="apostila-track">
+      <img src="fotos/entregavel/apostila-13.webp" alt="Página da apostila Velarte Essencial">
+      <img src="fotos/entregavel/apostila-14.webp" alt="Página da apostila Velarte Essencial">
+      <img src="fotos/entregavel/apostila-15.webp" alt="Página da apostila Velarte Essencial">
+      <img src="fotos/entregavel/apostila-16.webp" alt="Página da apostila Velarte Essencial">
+      <img src="fotos/entregavel/apostila-17.webp" alt="Página da apostila Velarte Essencial">
+      <img src="fotos/entregavel/apostila-18.webp" alt="Página da apostila Velarte Essencial">
+      <img src="fotos/entregavel/apostila-19.webp" alt="Página da apostila Velarte Essencial">
+      <img src="fotos/entregavel/apostila-13.webp" alt="Página da apostila Velarte Essencial">
+      <img src="fotos/entregavel/apostila-14.webp" alt="Página da apostila Velarte Essencial">
+      <img src="fotos/entregavel/apostila-15.webp" alt="Página da apostila Velarte Essencial">
+      <img src="fotos/entregavel/apostila-16.webp" alt="Página da apostila Velarte Essencial">
+      <img src="fotos/entregavel/apostila-17.webp" alt="Página da apostila Velarte Essencial">
+      <img src="fotos/entregavel/apostila-18.webp" alt="Página da apostila Velarte Essencial">
+      <img src="fotos/entregavel/apostila-19.webp" alt="Página da apostila Velarte Essencial">
+    </div>
+  </div>
+
+  <div class="wrap">
+    <ul class="check-list">
+      <li><span class="check-ico">✓</span>Fundamentos das velas artesanais</li>
+      <li><span class="check-ico">✓</span>Método Vela Base</li>
+      <li><span class="check-ico">✓</span>Guia da Cera de Soja</li>
+      <li><span class="check-ico">✓</span>28 projetos passo a passo</li>
+      <li><span class="check-ico">✓</span>Kit Inicial Velarte</li>
+      <li><span class="check-ico">✓</span>Lista de Fornecedores</li>
+      <li><span class="check-ico">✓</span>Guia de Precificação</li>
+      <li><span class="check-ico">✓</span>Acesso vitalício e digital às apostilas</li>
+    </ul>
+    <p class="center lead" style="font-weight:600;">+ R$83 em bônus incluídos</p>
+
+    <div class="math-box">
+      <p class="lead center">Uma vela artesanal pode ser vendida por R$25, R$30, R$40 ou mais, dependendo do modelo, tamanho, materiais e região.</p>
+      <div class="math-row" style="margin-top:14px;">
+        <span>2 velas</span><span class="op">×</span><span>R$30</span><span class="op">=</span><span style="color:var(--sage-dark)">R$60</span>
+      </div>
+      <p class="math-note">Isso significa que, vendendo apenas 2 velas de R$30, seriam R$60 em faturamento — mais do que o valor pago pelo curso.</p>
+    </div>
+    <p class="lead center">E algumas das criações que você vai aprender podem ter um valor percebido ainda maior.</p>
+
+    <p class="center" style="font-weight:600; font-size:14.5px; margin-top:18px;">Tenha acesso ao Velarte Essencial hoje por:</p>
+    <div class="price-block"><div class="now">R$47</div><div class="cash">à vista</div></div>
+    <a href="#checkout" class="btn">SIM, QUERO COMEÇAR A FAZER VELAS <span class="arrow">→</span></a>
+    <div class="trust-row"><span>🔒 Compra segura</span><span>Acesso digital</span><span>7 dias de garantia</span></div>
+    <p class="fine-print">Valores de venda são apenas exemplos e podem variar. Não há garantia de vendas ou faturamento.</p>
+  </div>
+</section>
+
+<!-- DOBRA 15 — FAQ -->
+<section class="bg-white">
+  <div class="wrap center">
+    <span class="eyebrow">Perguntas frequentes</span>
+    <h2 class="title">Ficou com alguma dúvida?</h2>
+  </div>
+  <div class="wrap">
+    <details class="faq">
+      <summary>O curso é em vídeo?<span class="chev">+</span></summary>
+      <div class="a">Não. O Velarte Essencial é um curso em apostilas digitais, para você consultar enquanto produz suas velas.</div>
+    </details>
+    <details class="faq">
+      <summary>Preciso já saber fazer velas?<span class="chev">+</span></summary>
+      <div class="a">Não. O conteúdo foi pensado para quem está começando do zero.</div>
+    </details>
+    <details class="faq">
+      <summary>Preciso comprar todos os materiais de uma vez?<span class="chev">+</span></summary>
+      <div class="a">Não. O Kit Inicial Velarte mostra o que você realmente precisa para começar.</div>
+    </details>
+    <details class="faq">
+      <summary>Como recebo o curso?<span class="chev">+</span></summary>
+      <div class="a">Após a confirmação do pagamento, você recebe os dados para acessar o conteúdo digital.</div>
+    </details>
+    <details class="faq">
+      <summary>Posso acessar pelo celular?<span class="chev">+</span></summary>
+      <div class="a">Sim. Você pode consultar suas apostilas pelo celular, tablet ou computador.</div>
+    </details>
+    <details class="faq">
+      <summary>Por quanto tempo tenho acesso?<span class="chev">+</span></summary>
+      <div class="a">O acesso ao Velarte Essencial é vitalício.</div>
+    </details>
+    <details class="faq">
+      <summary>E se eu comprar e não gostar?<span class="chev">+</span></summary>
+      <div class="a">Você tem 7 dias de garantia para solicitar o reembolso.</div>
+    </details>
+    <a href="#oferta" class="btn" style="margin-top:8px;">QUERO COMEÇAR A FAZER VELAS <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<!-- DOBRA 16 — SUPORTE -->
+<section class="bg-sage">
+  <div class="wrap">
+    <div class="support-box">
+      <div class="ic">💛</div>
+      <h3>Precisou de ajuda? Estamos por aqui.</h3>
+      <p class="hours">Se tiver alguma dificuldade com seu acesso ou precisar falar com nossa equipe, é só entrar em contato pelo nosso canal de suporte.<br><br>Atendimento de segunda a sexta, das 9h às 18h, e aos sábados, das 9h às 12h.<br><br><strong>📧 contato@folhadourada.com</strong></p>
+      <a href="mailto:contato@folhadourada.com" class="btn-outline">FALE COM O SUPORTE</a>
+    </div>
+    <a href="#oferta" class="btn" style="margin-top:18px;">QUERO COMEÇAR A FAZER VELAS <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<!-- DOBRA 17 — ÚLTIMA CHAMADA -->
+<section class="bg-brown" id="checkout">
+  <div class="wrap center">
+    <h2 class="title">Sua primeira vela pode começar aqui.</h2>
+    <p class="lead" style="color:#D9CBBC;">Você não precisa continuar salvando vídeos, tentando entender nomes de ceras ou adiando porque ainda não sabe o que comprar.</p>
+    <p class="lead" style="color:#D9CBBC; margin-bottom:20px;">No Velarte Essencial, você encontra o caminho organizado para começar:</p>
+  </div>
+  <div class="wrap">
+    <div style="max-width:280px; margin:0 auto 20px; border-radius:16px; overflow:hidden; box-shadow:var(--shadow-sm);">
+      <img src="fotos/section10-oferta.webp" alt="Acesso vitalício ao curso Velarte Essencial" style="width:100%; display:block;">
+    </div>
+    <ul class="check-list">
+      <li><span class="check-ico">✓</span><span style="color:#F2E8DB;">Fundamentos das velas artesanais</span></li>
+      <li><span class="check-ico">✓</span><span style="color:#F2E8DB;">Método Vela Base</span></li>
+      <li><span class="check-ico">✓</span><span style="color:#F2E8DB;">Guia da Cera de Soja</span></li>
+      <li><span class="check-ico">✓</span><span style="color:#F2E8DB;">28 projetos passo a passo</span></li>
+      <li><span class="check-ico">✓</span><span style="color:#F2E8DB;">Kit Inicial Velarte</span></li>
+      <li><span class="check-ico">✓</span><span style="color:#F2E8DB;">Lista de Fornecedores</span></li>
+      <li><span class="check-ico">✓</span><span style="color:#F2E8DB;">Guia de Precificação</span></li>
+      <li><span class="check-ico">✓</span><span style="color:#F2E8DB;">Acesso vitalício e digital às apostilas</span></li>
+    </ul>
+
+    <div class="center" style="margin:24px 0;">
+      <p style="font-weight:700; font-size:16px; color:#F2E8DB;">Velarte Essencial</p>
+      <p style="font-size:14px; color:#FF9E8A; text-decoration:line-through; font-weight:700; margin-top:4px;">De R$100</p>
+      <p style="font-family:'Nunito',sans-serif; font-weight:900; font-size:34px; color:#fff; background:var(--green); display:inline-block; padding:8px 22px; border-radius:14px; border:3px solid var(--brown); transform:rotate(-2deg); margin-top:10px;">Hoje por R$47 à vista</p>
+    </div>
+
+    <a href="#" class="btn">QUERO COMEÇAR AGORA <span class="arrow">→</span></a>
+    <div class="trust-row" style="color:#C9B8A6;">
+      <span>🔒 Pagamento seguro</span><span>7 dias de garantia</span><span>Acesso vitalício</span>
+    </div>
+  </div>
+</section>
+
+<!-- DOBRA 18 — RODAPÉ -->
+<footer>
+  <div class="wrap">
+    <div class="flogo">Velarte Essencial</div>
+    <p>Curso digital em apostilas sobre velas artesanais.</p>
+    <div class="flinks">
+      <a href="#">Termos de Uso</a>
+      <a href="#">Política de Privacidade</a>
+      <a href="mailto:contato@folhadourada.com">Contato e Suporte</a>
+    </div>
+    <p>© 2026 Velarte Essencial. Todos os direitos reservados.</p>
+    <p class="fdisc">Os resultados podem variar de acordo com a aplicação, materiais utilizados e dedicação de cada pessoa.</p>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="stickyCta">
+  <div class="sp"><div class="l">à vista</div><div class="v">R$47</div></div>
+  <a href="#oferta" class="btn">QUERO COMEÇAR <span class="arrow">→</span></a>
+</div>
+
+<script>
+  var sticky = document.getElementById('stickyCta');
+  var offer = document.getElementById('oferta');
+  var checkout = document.getElementById('checkout');
+  window.addEventListener('scroll', function(){
+    var offerBottom = offer.getBoundingClientRect().bottom;
+    var checkoutTop = checkout.getBoundingClientRect().top;
+    var windowH = window.innerHeight;
+    if(offerBottom < 0 && checkoutTop > windowH){
+      sticky.classList.add('show');
+    } else {
+      sticky.classList.remove('show');
+    }
+  });
+</script>
+
+</body>
+</html>
