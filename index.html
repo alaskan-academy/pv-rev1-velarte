@@ -59,6 +59,14 @@
   .center{ text-align:center; }
   .divider{ width:56px; height:3px; background:var(--terracotta); border-radius:3px; margin:18px auto; }
 
+  /* Text emphasis */
+  .hl{ font-weight:800; color:var(--terracotta-dark); }
+  .hl-u{ text-decoration:underline; text-decoration-color:var(--terracotta); text-underline-offset:3px; text-decoration-thickness:2px; }
+  .hl-green{ font-weight:800; color:var(--green-dark); }
+  .hl-sage{ font-weight:800; color:var(--sage-dark); }
+  .hl-light{ font-weight:800; color:var(--yellow); }
+  .hl-light.hl-u{ text-decoration-color:var(--yellow); }
+
   /* Header */
   header.site{
     position:sticky; top:0; z-index:50;
@@ -222,6 +230,15 @@
     padding:10px 12px 12px; font-size:12px; font-weight:800; line-height:1.35;
     color:var(--brown); background:var(--yellow); border-top:2px solid var(--brown);
   }
+  @media (max-width:640px){
+    .testi-grid{
+      display:flex; overflow-x:auto; scroll-snap-type:x mandatory;
+      margin:8px -22px 0; padding:0 22px 6px; gap:14px;
+      scrollbar-width:none;
+    }
+    .testi-grid::-webkit-scrollbar{ display:none; }
+    .testi-card{ flex:0 0 100%; scroll-snap-align:start; }
+  }
   .stat-big{ text-align:center; margin-bottom:8px; }
   .stat-big .num{ font-family:'Nunito',sans-serif; font-weight:900; font-size:44px; color:var(--terracotta-dark); }
   .stat-big .lbl{ font-size:14px; font-weight:600; color:var(--brown-soft); }
@@ -370,17 +387,16 @@
 <!-- DOBRA 1 — GANCHO -->
 <section class="hero">
   <div class="wrap">
-    <h1>Aprenda a fazer velas artesanais do zero, começando pelos materiais e técnicas certas.</h1>
+    <h1>Aprenda a fazer 28 tipos de velas artesanais, das aromáticas às florais, decorativas e artísticas, começando do zero com o Método Vela Base.</h1>
     <p class="lead">Mesmo que hoje você ainda não saiba qual cera ou pavio usar.</p>
 
     <div class="hero-photo">
       <img src="fotos/hero-mariana.webp" alt="Mariana Bellini segurando uma vela artesanal Velarte Essencial">
     </div>
 
-    <p class="lead" style="font-weight:600; color:var(--brown);">Com o Método Vela Base, você aprende primeiro o que realmente importa sobre cera, pavio, essência e temperatura — para depois avançar por 28 projetos, sem depender de tentativa e erro.</p>
+    <p class="lead" style="font-weight:600; color:var(--brown);">Com o <strong class="hl">Método Vela Base</strong>, você aprende primeiro o que realmente importa sobre cera, pavio, essência e temperatura — para depois avançar por <strong class="hl">28 projetos</strong>, <strong class="hl-u hl">sem depender de tentativa e erro</strong>.</p>
 
     <div style="margin-top:26px;">
-      <a href="#oferta" class="btn">QUERO COMEÇAR A FAZER VELAS <span class="arrow">→</span></a>
       <div class="trust-row">
         <span>🔒 Pagamento seguro</span>
         <span>📱 Acesso digital</span>
@@ -395,8 +411,8 @@
   <div class="wrap center">
     <span class="eyebrow">O método</span>
     <h2 class="title">Comece pela base. Depois, veja tudo o que você pode criar.</h2>
-    <p class="lead">Com o Método Vela Base, você aprende primeiro os fundamentos que se repetem nas velas artesanais.</p>
-    <p class="lead" style="margin-top:10px;">Depois, usa essa base para avançar por 28 projetos passo a passo:</p>
+    <p class="lead">Com o <strong class="hl">Método Vela Base</strong>, você aprende primeiro os fundamentos que se repetem nas velas artesanais.</p>
+    <p class="lead" style="margin-top:10px;">Depois, usa essa base para avançar por <strong class="hl">28 projetos</strong> passo a passo:</p>
   </div>
 
   <div class="wrap">
@@ -413,7 +429,7 @@
     </div>
 
     <p class="lead center" style="margin-top:22px;">Tudo em apostilas ilustradas para acompanhar enquanto você faz.</p>
-    <p class="center" style="font-weight:700; font-size:16.5px; margin-top:14px;">Você não precisa aprender 28 técnicas do zero.<br>Aprende a base uma vez. E usa para criar muito mais.</p>
+    <p class="center" style="font-weight:700; font-size:16.5px; margin-top:14px;">Você <strong class="hl">não precisa</strong> aprender 28 técnicas do zero.<br>Aprende a base <strong class="hl hl-u">uma vez</strong>. E usa para criar muito mais.</p>
   </div>
 </section>
 
@@ -422,18 +438,18 @@
   <div class="wrap center">
     <span class="eyebrow sage">Como funciona</span>
     <h2 class="title">Aprenda no seu ritmo. E transforme suas criações em uma possível renda em casa.</h2>
-    <p class="lead">O Velarte Essencial é um curso em apostilas, feito para você consultar enquanto coloca a mão na massa.</p>
+    <p class="lead">O Velarte Essencial é um <strong class="hl-sage">curso em apostilas</strong>, feito para você consultar enquanto coloca a mão na massa.</p>
   </div>
 
   <div class="wrap">
     <ul class="check-list">
-      <li><span class="check-ico">✓</span>Acompanhe o passo a passo enquanto produz</li>
-      <li><span class="check-ico">✓</span>Volte à receita sempre que precisar</li>
-      <li><span class="check-ico">✓</span>Aprenda no seu tempo, sem depender de horários</li>
-      <li><span class="check-ico">✓</span>Crie velas para usar, presentear ou começar a vender</li>
+      <li><span class="check-ico">✓</span>Acompanhe o <strong>passo a passo</strong> enquanto produz</li>
+      <li><span class="check-ico">✓</span><strong>Volte à receita</strong> sempre que precisar</li>
+      <li><span class="check-ico">✓</span>Aprenda no seu tempo, <strong>sem depender de horários</strong></li>
+      <li><span class="check-ico">✓</span>Crie velas para usar, presentear ou <strong>começar a vender</strong></li>
     </ul>
-    <p class="lead center">E com o Método Vela Base, você não precisa depender de tentativa e erro para cada nova criação.</p>
-    <p class="center" style="font-weight:700; font-size:16.5px; margin-top:14px;">Comece aprendendo. Depois, suas próprias velas podem virar uma nova fonte de renda.</p>
+    <p class="lead center">E com o <strong class="hl-sage">Método Vela Base</strong>, você <strong class="hl-sage">não precisa depender de tentativa e erro</strong> para cada nova criação.</p>
+    <p class="center" style="font-weight:700; font-size:16.5px; margin-top:14px;">Comece aprendendo. Depois, suas próprias velas podem virar uma <strong class="hl-u hl-sage">nova fonte de renda</strong>.</p>
   </div>
 </section>
 
@@ -449,12 +465,12 @@
     </div>
     <p class="lead center">Com o Velarte Essencial, você vai poder:</p>
     <ul class="check-list">
-      <li><span class="check-ico">✓</span>Saber quais materiais comprar para começar</li>
-      <li><span class="check-ico">✓</span>Entender melhor ceras, pavios e temperaturas</li>
-      <li><span class="check-ico">✓</span>Fazer suas primeiras velas aromáticas</li>
-      <li><span class="check-ico">✓</span>Criar velas florais, decorativas e artísticas</li>
-      <li><span class="check-ico">✓</span>Parar de depender apenas de tentativa e erro</li>
-      <li><span class="check-ico">✓</span>Calcular o custo das suas próprias velas</li>
+      <li><span class="check-ico">✓</span>Saber <strong>quais materiais comprar</strong> para começar</li>
+      <li><span class="check-ico">✓</span>Entender melhor <strong>ceras, pavios e temperaturas</strong></li>
+      <li><span class="check-ico">✓</span>Fazer suas primeiras <strong>velas aromáticas</strong></li>
+      <li><span class="check-ico">✓</span>Criar velas <strong>florais, decorativas e artísticas</strong></li>
+      <li><span class="check-ico">✓</span>Parar de depender apenas de <strong>tentativa e erro</strong></li>
+      <li><span class="check-ico">✓</span><strong>Calcular o custo</strong> das suas próprias velas</li>
     </ul>
     <p class="center" style="font-weight:700; font-size:16.5px;">Comece pelo básico. E evolua no seu ritmo.</p>
   </div>
@@ -532,7 +548,7 @@
       </details>
     </div>
 
-    <p class="lead center" style="margin-top:22px;">Tudo em apostilas com imagens passo a passo para consultar enquanto faz.</p>
+    <p class="lead center" style="margin-top:22px;">Tudo em apostilas <strong class="hl-sage">com imagens</strong> passo a passo para consultar enquanto faz.</p>
   </div>
 
   <div class="velas-marquee">
@@ -576,7 +592,7 @@
   <div class="wrap center">
     <span class="eyebrow">Bônus exclusivos</span>
     <h2 class="title">E ainda leva 3 bônus</h2>
-    <p class="lead">Para você não precisar descobrir o restante sozinha.</p>
+    <p class="lead">Para você não precisar <strong class="hl">descobrir o restante sozinha</strong>.</p>
   </div>
 
   <div class="wrap">
@@ -584,7 +600,7 @@
       <div class="bonus-mock"><div class="bi">🎁</div><div class="bt">Kit Inicial</div></div>
       <div class="bonus-info">
         <div class="name">BÔNUS 1 — Kit Inicial Velarte</div>
-        <div class="desc">O que comprar para começar — e o que você ainda não precisa comprar.</div>
+        <div class="desc"><strong>O que comprar</strong> para começar — e o que você <strong>ainda não precisa comprar</strong>.</div>
         <div class="price-tag"><span class="old">De R$27</span><span class="new">GRÁTIS</span></div>
       </div>
     </div>
@@ -593,7 +609,7 @@
       <div class="bonus-mock sage"><div class="bi">📋</div><div class="bt">Fornecedores</div></div>
       <div class="bonus-info">
         <div class="name">BÔNUS 2 — Lista de Fornecedores Velarte</div>
-        <div class="desc">Indicações para facilitar a busca pelos materiais das suas velas.</div>
+        <div class="desc"><strong>Indicações</strong> para facilitar a busca pelos materiais das suas velas.</div>
         <div class="price-tag"><span class="old">De R$19</span><span class="new">GRÁTIS</span></div>
       </div>
     </div>
@@ -602,12 +618,12 @@
       <div class="bonus-mock"><div class="bi">🧮</div><div class="bt">Precificação</div></div>
       <div class="bonus-info">
         <div class="name">BÔNUS 3 — Calculando o Preço da Sua Vela</div>
-        <div class="desc">Aprenda a calcular seus custos e descobrir quanto realmente custa cada vela que você produz.</div>
+        <div class="desc">Aprenda a <strong>calcular seus custos</strong> e descobrir quanto realmente custa cada vela que você produz.</div>
         <div class="price-tag"><span class="old">De R$37</span><span class="new">GRÁTIS</span></div>
       </div>
     </div>
 
-    <div class="value-banner">R$83 em materiais extras incluídos sem custo no Velarte Essencial.</div>
+    <div class="value-banner">R$83 em materiais extras <u>incluídos sem custo</u> no Velarte Essencial.</div>
   </div>
 </section>
 
@@ -651,18 +667,18 @@
     <div class="urgency-box">
       <div class="ic">⏳</div>
       <p style="font-weight:800; font-size:19px;">Restam 47 acessos neste primeiro lote.</p>
-      <p>Para a primeira turma do Velarte Essencial, liberamos apenas 300 acessos na condição de lançamento.</p>
+      <p>Para a primeira turma do Velarte Essencial, liberamos apenas <strong class="hl">300 acessos</strong> na condição de lançamento.</p>
       <p style="font-weight:700; margin-top:8px;">Quem entrar neste lote garante:</p>
       <ul class="check-list">
-        <li><span class="check-ico">✓</span>Velarte Essencial completo</li>
-        <li><span class="check-ico">✓</span>Os 3 bônus sem custo adicional</li>
-        <li><span class="check-ico">✓</span>Acesso vitalício ao curso em apostilas</li>
+        <li><span class="check-ico">✓</span><strong>Velarte Essencial completo</strong></li>
+        <li><span class="check-ico">✓</span>Os 3 bônus <strong>sem custo adicional</strong></li>
+        <li><span class="check-ico">✓</span>Acesso <strong>vitalício</strong> ao curso em apostilas</li>
       </ul>
       <div class="progress-track"><div class="progress-fill"></div></div>
       <p class="progress-label">47 de 300 acessos disponíveis</p>
-      <p style="margin-top:14px;">253 acessos já foram liberados. Restam 47.</p>
-      <p>Quando este lote chegar a 300 alunas, o próximo será aberto com um novo valor.</p>
-      <p>Se você quer começar, aproveite enquanto ainda faz parte deste primeiro lote.</p>
+      <p style="margin-top:14px;">253 acessos já foram liberados. <strong class="hl">Restam 47</strong>.</p>
+      <p>Quando este lote chegar a 300 alunas, <strong class="hl">o próximo será aberto com um novo valor</strong>.</p>
+      <p>Se você quer começar, <strong class="hl hl-u">aproveite enquanto ainda faz parte deste primeiro lote</strong>.</p>
     </div>
   </div>
 </section>
@@ -675,9 +691,9 @@
     <div class="hero-media" style="width:100%;">
       <img src="fotos/section9-autoridade.webp" alt="Mariana Bellini na loja Velarte Essencial">
     </div>
-    <p class="lead">Mariana Bellini transformou o interesse pelas velas em parte da sua rotina e hoje compartilha o caminho que uma iniciante precisa conhecer para começar com mais segurança.</p>
-    <p class="lead">No Velarte Essencial, ela reuniu os fundamentos, materiais e projetos em uma sequência simples de acompanhar.</p>
-    <p style="font-weight:700; font-size:15.5px;">Sem complicação. Sem termos difíceis. Do jeito que uma iniciante precisa.</p>
+    <p class="lead">Mariana Bellini transformou o interesse pelas velas em parte da sua rotina e hoje compartilha o caminho que uma iniciante precisa conhecer para <strong class="hl-sage">começar com mais segurança</strong>.</p>
+    <p class="lead">No Velarte Essencial, ela reuniu os fundamentos, materiais e projetos em uma <strong class="hl-sage">sequência simples</strong> de acompanhar.</p>
+    <p style="font-weight:700; font-size:15.5px;"><u>Sem complicação. Sem termos difíceis.</u> Do jeito que uma iniciante precisa.</p>
   </div>
 </section>
 
@@ -695,11 +711,11 @@
         <img src="fotos/section10-oferta.webp" alt="Acesso vitalício ao curso Velarte Essencial" style="width:100%; display:block;">
       </div>
       <ul class="check-list">
-        <li><span class="check-ico">✓</span>Curso completo em apostilas passo a passo</li>
+        <li><span class="check-ico">✓</span><strong>Curso completo</strong> em apostilas passo a passo</li>
         <li><span class="check-ico">✓</span>Método Vela Base</li>
         <li><span class="check-ico">✓</span>Guia da Cera de Soja</li>
-        <li><span class="check-ico">✓</span>28 projetos de velas artesanais</li>
-        <li><span class="check-ico">✓</span>Acesso VITALÍCIO pelo celular, tablet ou computador</li>
+        <li><span class="check-ico">✓</span><strong>28 projetos</strong> de velas artesanais</li>
+        <li><span class="check-ico">✓</span>Acesso <strong>VITALÍCIO</strong> pelo celular, tablet ou computador</li>
       </ul>
 
       <p style="text-align:center; font-weight:700; font-size:13.5px; text-transform:uppercase; letter-spacing:1px; color:var(--terracotta-dark); margin:18px 0 10px;">+ 3 bônus grátis</p>
@@ -710,7 +726,7 @@
         <div class="total-row"><span>Valor dos bônus</span><span>R$83</span></div>
       </div>
 
-      <p class="center lead" style="margin-top:14px;">Tudo isso poderia facilmente custar mais de R$100.<br>Hoje, você não paga R$100. Nem R$83.</p>
+      <p class="center lead" style="margin-top:14px;">Tudo isso poderia facilmente custar mais de R$100.<br><strong class="hl-green">Hoje, você não paga R$100. Nem R$83.</strong></p>
       <p class="center" style="font-size:14px; font-weight:600; margin-top:4px;">Seu acesso completo ao Velarte Essencial sai por apenas:</p>
 
       <div class="price-block">
@@ -736,7 +752,7 @@
       <img class="g-seal" src="fotos/guarantee-seal.webp" alt="Selo de garantia de 7 dias — satisfação garantida ou seu dinheiro de volta">
       <div>
         <h3>7 dias de garantia</h3>
-        <p>Você tem 7 dias para conhecer o Velarte Essencial. Entre, acesse as apostilas e conheça o conteúdo com calma. Se dentro de 7 dias você perceber que não é para você, basta solicitar o reembolso. Você recebe 100% do valor pago de volta. Sem risco para começar.</p>
+        <p>Você tem <strong class="hl-sage">7 dias</strong> para conhecer o Velarte Essencial. Entre, acesse as apostilas e conheça o conteúdo com calma. Se dentro de 7 dias você perceber que não é para você, basta solicitar o reembolso. Você recebe <strong class="hl-sage hl-u">100% do valor pago de volta</strong>. Sem risco para começar.</p>
       </div>
     </div>
     <a href="#oferta" class="btn" style="margin-top:22px;">QUERO COMEÇAR A FAZER VELAS <span class="arrow">→</span></a>
@@ -754,9 +770,9 @@
       <img src="fotos/section12-historia.webp" alt="Mariana Bellini, especialista e fundadora do Velarte Essencial">
     </div>
     <p class="lead">Mariana Bellini conheceu as velas artesanais em Petrópolis, na Região Serrana do Rio de Janeiro.</p>
-    <p class="lead">Começou fazendo pequenos testes em casa e enfrentou as mesmas dúvidas de muitas iniciantes: qual cera escolher, qual pavio usar e por que algumas velas simplesmente não davam certo. Foi quando decidiu organizar o processo e dominar primeiro os fundamentos antes de avançar para novas criações.</p>
-    <p class="lead">Com o tempo, vieram as primeiras peças bem-feitas, os pedidos de pessoas próximas e novas encomendas. O que começou dentro de casa cresceu até se transformar em seu próprio espaço dedicado às velas artesanais, onde Mariana passou a produzir diferentes modelos e aprofundar cada vez mais sua técnica.</p>
-    <p class="lead">Hoje, ela reuniu esse conhecimento no Velarte Essencial, para tornar o começo de outras mulheres muito mais simples.</p>
+    <p class="lead">Começou fazendo pequenos testes em casa e enfrentou <strong class="hl">as mesmas dúvidas de muitas iniciantes</strong>: qual cera escolher, qual pavio usar e por que algumas velas simplesmente não davam certo. Foi quando decidiu organizar o processo e <strong class="hl">dominar primeiro os fundamentos</strong> antes de avançar para novas criações.</p>
+    <p class="lead">Com o tempo, vieram as primeiras peças bem-feitas, os pedidos de pessoas próximas e novas encomendas. O que começou dentro de casa <strong class="hl">cresceu até se transformar em seu próprio espaço</strong> dedicado às velas artesanais, onde Mariana passou a produzir diferentes modelos e aprofundar cada vez mais sua técnica.</p>
+    <p class="lead">Hoje, ela reuniu esse conhecimento no Velarte Essencial, para <strong class="hl hl-u">tornar o começo de outras mulheres muito mais simples</strong>.</p>
     <a href="#oferta" class="btn" style="margin-top:8px;">QUERO COMEÇAR A FAZER VELAS <span class="arrow">→</span></a>
   </div>
 </section>
@@ -770,17 +786,17 @@
   <div class="wrap">
     <div class="obj-card">
       <div class="obj-q"><span class="qm">?</span>"Nunca fiz uma vela."</div>
-      <div class="obj-a">Melhor ainda. O Velarte Essencial começa pelos fundamentos e mostra até os materiais necessários para começar.</div>
+      <div class="obj-a"><strong class="hl">Melhor ainda.</strong> O Velarte Essencial começa pelos fundamentos e mostra até os materiais necessários para começar.</div>
     </div>
     <div class="obj-card">
       <div class="obj-q"><span class="qm">?</span>"Tenho medo de comprar tudo errado."</div>
-      <div class="obj-a">Você recebe o Kit Inicial Velarte + Lista de Fornecedores, para saber o que procurar e evitar compras desnecessárias.</div>
+      <div class="obj-a">Você recebe o <strong class="hl">Kit Inicial Velarte</strong> + <strong class="hl">Lista de Fornecedores</strong>, para saber o que procurar e evitar compras desnecessárias.</div>
     </div>
     <div class="obj-card">
       <div class="obj-q"><span class="qm">?</span>"Não tenho experiência com artesanato."</div>
-      <div class="obj-a">Você não precisa. As apostilas foram organizadas para serem consultadas passo a passo, no seu ritmo.</div>
+      <div class="obj-a"><strong class="hl">Você não precisa.</strong> As apostilas foram organizadas para serem consultadas passo a passo, no seu ritmo.</div>
     </div>
-    <p class="center" style="font-weight:700; font-size:16px; margin-top:18px;">Se você tem vontade de aprender, já pode começar.</p>
+    <p class="center" style="font-weight:700; font-size:16px; margin-top:18px;">Se você tem <u>vontade de aprender</u>, já pode começar.</p>
     <a href="#oferta" class="btn" style="margin-top:18px;">QUERO COMEÇAR A FAZER VELAS <span class="arrow">→</span></a>
   </div>
 </section>
@@ -829,9 +845,9 @@
       <div class="math-row" style="margin-top:14px;">
         <span>2 velas</span><span class="op">×</span><span>R$30</span><span class="op">=</span><span style="color:var(--sage-dark)">R$60</span>
       </div>
-      <p class="math-note">Isso significa que, vendendo apenas 2 velas de R$30, seriam R$60 em faturamento — mais do que o valor pago pelo curso.</p>
+      <p class="math-note">Isso significa que, vendendo apenas 2 velas de R$30, seriam <strong class="hl-green">R$60 em faturamento</strong> — mais do que o valor pago pelo curso.</p>
     </div>
-    <p class="lead center">E algumas das criações que você vai aprender podem ter um valor percebido ainda maior.</p>
+    <p class="lead center">E algumas das criações que você vai aprender podem ter um <strong class="hl">valor percebido ainda maior</strong>.</p>
 
     <p class="center" style="font-weight:600; font-size:14.5px; margin-top:18px;">Tenha acesso ao Velarte Essencial hoje por:</p>
     <div class="price-block"><div class="now">R$47</div><div class="cash">à vista</div></div>
@@ -850,31 +866,31 @@
   <div class="wrap">
     <details class="faq">
       <summary>O curso é em vídeo?<span class="chev">+</span></summary>
-      <div class="a">Não. O Velarte Essencial é um curso em apostilas digitais, para você consultar enquanto produz suas velas.</div>
+      <div class="a"><strong class="hl">Não.</strong> O Velarte Essencial é um curso em apostilas digitais, para você consultar enquanto produz suas velas.</div>
     </details>
     <details class="faq">
       <summary>Preciso já saber fazer velas?<span class="chev">+</span></summary>
-      <div class="a">Não. O conteúdo foi pensado para quem está começando do zero.</div>
+      <div class="a"><strong class="hl">Não.</strong> O conteúdo foi pensado para quem está começando do zero.</div>
     </details>
     <details class="faq">
       <summary>Preciso comprar todos os materiais de uma vez?<span class="chev">+</span></summary>
-      <div class="a">Não. O Kit Inicial Velarte mostra o que você realmente precisa para começar.</div>
+      <div class="a"><strong class="hl">Não.</strong> O Kit Inicial Velarte mostra o que você realmente precisa para começar.</div>
     </details>
     <details class="faq">
       <summary>Como recebo o curso?<span class="chev">+</span></summary>
-      <div class="a">Após a confirmação do pagamento, você recebe os dados para acessar o conteúdo digital.</div>
+      <div class="a">Após a confirmação do pagamento, você recebe os dados para <strong>acessar o conteúdo digital</strong>.</div>
     </details>
     <details class="faq">
       <summary>Posso acessar pelo celular?<span class="chev">+</span></summary>
-      <div class="a">Sim. Você pode consultar suas apostilas pelo celular, tablet ou computador.</div>
+      <div class="a"><strong class="hl">Sim.</strong> Você pode consultar suas apostilas pelo celular, tablet ou computador.</div>
     </details>
     <details class="faq">
       <summary>Por quanto tempo tenho acesso?<span class="chev">+</span></summary>
-      <div class="a">O acesso ao Velarte Essencial é vitalício.</div>
+      <div class="a">O acesso ao Velarte Essencial é <strong class="hl">vitalício</strong>.</div>
     </details>
     <details class="faq">
       <summary>E se eu comprar e não gostar?<span class="chev">+</span></summary>
-      <div class="a">Você tem 7 dias de garantia para solicitar o reembolso.</div>
+      <div class="a">Você tem <strong class="hl">7 dias de garantia</strong> para solicitar o reembolso.</div>
     </details>
     <a href="#oferta" class="btn" style="margin-top:8px;">QUERO COMEÇAR A FAZER VELAS <span class="arrow">→</span></a>
   </div>
@@ -886,7 +902,7 @@
     <div class="support-box">
       <div class="ic">💛</div>
       <h3>Precisou de ajuda? Estamos por aqui.</h3>
-      <p class="hours">Se tiver alguma dificuldade com seu acesso ou precisar falar com nossa equipe, é só entrar em contato pelo nosso canal de suporte.<br><br>Atendimento de segunda a sexta, das 9h às 18h, e aos sábados, das 9h às 12h.<br><br><strong>📧 contato@folhadourada.com</strong></p>
+      <p class="hours">Se tiver alguma dificuldade com seu acesso ou precisar falar com nossa equipe, é só entrar em contato pelo nosso canal de suporte.<br><br><strong class="hl-sage">Atendimento de segunda a sexta, das 9h às 18h</strong>, e aos sábados, das 9h às 12h.<br><br><strong>📧 contato@folhadourada.com</strong></p>
       <a href="mailto:contato@folhadourada.com" class="btn-outline">FALE COM O SUPORTE</a>
     </div>
     <a href="#oferta" class="btn" style="margin-top:18px;">QUERO COMEÇAR A FAZER VELAS <span class="arrow">→</span></a>
@@ -897,8 +913,8 @@
 <section class="bg-brown" id="checkout">
   <div class="wrap center">
     <h2 class="title">Sua primeira vela pode começar aqui.</h2>
-    <p class="lead" style="color:#D9CBBC;">Você não precisa continuar salvando vídeos, tentando entender nomes de ceras ou adiando porque ainda não sabe o que comprar.</p>
-    <p class="lead" style="color:#D9CBBC; margin-bottom:20px;">No Velarte Essencial, você encontra o caminho organizado para começar:</p>
+    <p class="lead" style="color:#D9CBBC;">Você <strong class="hl-light">não precisa</strong> continuar salvando vídeos, tentando entender nomes de ceras ou adiando porque ainda não sabe o que comprar.</p>
+    <p class="lead" style="color:#D9CBBC; margin-bottom:20px;">No Velarte Essencial, você encontra o <strong class="hl-light hl-u">caminho organizado</strong> para começar:</p>
   </div>
   <div class="wrap">
     <div style="max-width:280px; margin:0 auto 20px; border-radius:16px; overflow:hidden; box-shadow:var(--shadow-sm);">
